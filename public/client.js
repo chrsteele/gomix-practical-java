@@ -1,3 +1,7 @@
+//Creating a Todo App with JavaScript / HTML
+//This code follows the MVC architecture (Model, View, Controller)
+
+// Model object + methods
 var todoList = {
   todos: [],
   addTodo: function(todoText) {
@@ -28,7 +32,7 @@ var todoList = {
     
     // Case 1: If everything’s true, make everything false.
     
-    // // Case 2: Otherwise, make everything true.
+    // Case 2: Otherwise, make everything true.
     
     this.todos.forEach(function(todo) {
       if (completedTodos === totalTodos) {
@@ -40,6 +44,7 @@ var todoList = {
   }
 };
 
+// Controller object + methods
 var handlers = {
   addTodo: function() {
     var addTodoTextInput = document.getElementById('addTodoTextInput');
@@ -71,6 +76,7 @@ var handlers = {
   }  
 };
 
+// View object + methods
 var view = {
   displayTodos: function() {
     var todosUl = document.querySelector('ul');
